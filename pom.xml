@@ -27,7 +27,7 @@
             <version>3.14.5</version>
         </dependency>
     </dependencies>
-
+        
     <!-- This blob of configuration tells Maven to make the jar executable. You can run it with:
     mvn clean package
     java -jar target/javaparser-maven-sample-1.0-SNAPSHOT-shaded.jar
@@ -56,5 +56,25 @@
                 </executions>
             </plugin>
         </plugins>
+              <repositories>
+         <repository>
+        <id>myrepo-releases</id>
+         <name>myrepository-releases</name>
+
+        <url>http://localhost:8081/artifactory/myrepository-releases</url>
+        <snapshots>
+            <enabled>false</enabled>
+        </snapshots>
+    </repository>
+    <repository>
+        <id>myrepo-snapshots</id>
+        <name>myrepository-snapshots</name>
+        <url>http://localhost:8081/artifactory/myrepository-snapshots</url>
+        <releases>
+            <enabled>false</enabled>
+        </releases>
+    </repository>
+</repositories
+
     </build>
 </project>
