@@ -74,7 +74,7 @@
             <enabled>false</enabled>
         </releases>
     </repository>
-</repositories
+             </repositories>
 
     </build>
 </project>
